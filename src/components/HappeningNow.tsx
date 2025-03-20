@@ -7,7 +7,7 @@ const dummyContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Q
 const HappeningNow = ({ ...props }) => {
   return (
     <div {...props}>
-      <h2>HAPPENING NOW</h2>
+      <h2 className="text-4xl font-bold uppercase my-8">HAPPENING NOW</h2>
       <div className="block xl:flex">
         <div className="w-full h-full xl:w-2/3 lg:mr-10 md:mr-8 mr-4">
           <Article
