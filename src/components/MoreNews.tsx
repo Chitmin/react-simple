@@ -6,12 +6,12 @@ import {
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useState } from "react";
 import { randomDateDistanceFormat } from "@/lib/utils";
-import TimeDistanceNote from "./TimeDistanceNote";
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons,
 } from "./CarouselScrollButtons";
+import Article from "./Article";
 
 const NewsArticle = ({
   category,
@@ -20,23 +20,21 @@ const NewsArticle = ({
   category: string;
   title: string;
 }) => {
+  const content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+  dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+  consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.`;
+
   return (
-    <article className="mb-8">
-      <header>
-        <h1 className="text-xl font-bold text-secondary mb-2">{category}</h1>
-        <h2 className="text-md font-bold mb-2">{title}</h2>
-      </header>
-      <p className="text-sm text-gray-700 mb-2 line-clamp-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      <footer>
-        <TimeDistanceNote time={randomDateDistanceFormat()} />
-      </footer>
-    </article>
+    <Article
+      className="mb-8"
+      title={title}
+      tag={category}
+      time={randomDateDistanceFormat()}
+      content={content}
+      variant="plain"
+    />
   );
 };
 
