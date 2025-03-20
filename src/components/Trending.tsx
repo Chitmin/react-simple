@@ -113,7 +113,7 @@ const Trending = ({ ...props }) => {
           {articles.map((article, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <Article
-                key={index}
+                key={"" + index}
                 img={article.img}
                 title={article.title}
                 content={article.content}
