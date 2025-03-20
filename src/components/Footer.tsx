@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 const Footer = () => {
   return (
     <footer className="bg-gray-400">
-      <div className="container mx-auto px-4 py-12 flex text-white justify-between items-start">
-        <div className="flex-1">LOGO</div>
-        <div className="flex justify-around flex-3">
+      <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row text-white md:justify-between md:items-start">
+        <div className="md:flex-1 mb-4 p-4">LOGO</div>
+        <div className="flex md:justify-around md:flex-3 mb-4">
           <nav className="text-xs mr-8">
             <ul className="flex flex-col">
               <li className="mb-4">
@@ -81,7 +81,7 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-        <div className="flex-2 px-4">
+        <div className="md:flex-2 px-4 mb-4">
           <div className="relative flex items-center max-w-64 w-full mb-2">
             <Input type="email" placeholder="Email" className="block" />
             <Send className="absolute h-6 w-6 right-0 top-0 bottom-0 m-auto mr-2" />
@@ -90,7 +90,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur elit.
           </div>
         </div>
-        <div className="flex-1 flex justify-around">
+        <div className="md:flex-1 flex justify-between md:justify-around mb-4 p-4">
           <Button variant="outline" size="icon">
             <Instagram />
           </Button>
