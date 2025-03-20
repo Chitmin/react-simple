@@ -9,7 +9,7 @@ interface BaseProps {
 }
 interface Props extends BaseProps {
   variant?: "card" | "plain" | "jumbo";
-  [key: string]: any;
+  [key: string]: string | undefined;
 }
 
 const Card = ({ img, title, content, time }: BaseProps) => {
